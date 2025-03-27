@@ -1,0 +1,171 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Chat Container */
+.chat-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  text-align: center;
+}
+
+/* Chat Title */
+.chat-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Chat Box */
+.chat-box {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Messages */
+.message {
+  max-width: 75%;
+  padding: 8px 12px;
+  border-radius: 15px;
+  margin: 5px 0;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+/* User Message */
+.message.user {
+  align-self: flex-end;
+  background: #007bff;
+  color: white;
+}
+
+/* Bot Message */
+.message.bot {
+  align-self: flex-start;
+  background: #f1f1f1;
+  color: #333;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  font-size: 12px;
+  color: gray;
+  align-self: flex-start;
+  margin-top: 5px;
+  animation: fadeInOut 1.5s infinite;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+/* Chat Input */
+.chat-input-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.chat-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Chat Button */
+.chat-button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chat-button:hover {
+  background: #0056b3;
+}
+
+/* User Menu - Top Right Corner */
+.user-menu-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.user-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333; /* Color for the user icon */
+}
+
+.user-icon:hover {
+  color: #007bff; /* Hover effect */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.user-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Logout Button */
+.logout-btn {
+  width: 100%;
+  padding: 8px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #b52d3b;
+}
