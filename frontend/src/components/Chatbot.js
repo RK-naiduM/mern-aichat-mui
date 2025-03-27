@@ -37,7 +37,7 @@ const Chatbot = ({ tier }) => {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/chat",
+      "http://52.86.234.22:5000/chat",
       { userQuery: input },
       {
         headers: { "x-auth-token": localStorage.getItem("token") },
